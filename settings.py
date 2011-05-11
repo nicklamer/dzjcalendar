@@ -89,6 +89,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+    'django.contrib.admin',
     'dzjcalendar'
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
