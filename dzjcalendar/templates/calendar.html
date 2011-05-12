@@ -1,0 +1,12 @@
+<iframe src="https://www.google.com/calendar/embed?title=DZJ%20Calendar&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;hl=pl&amp;bgcolor=%23ffffff&amp;src=dzj.calendar%40gmail.com&amp;color=%23182C57&amp;ctz=Europe%2FWarsaw" style=" border:solid 1px #777 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+{% if users_list %}
+    <ul>
+    User list:
+    {% for user in users_list %}
+        <li><a href="/user/{{ user.id }}/">{{ user }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No users in system.</p>
+{% endif %}
