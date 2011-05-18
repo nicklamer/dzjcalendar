@@ -13,3 +13,8 @@ def calendar(request):
         'users_list': user
         })
     return HttpResponse(t.render(c))
+
+def calendar_frame(request):
+    t = loader.get_template('calendar_frame.html')
+    c = Context()
+    return HttpResponse(t.render(c))

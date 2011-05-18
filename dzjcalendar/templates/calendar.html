@@ -3,6 +3,12 @@
   </style>
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script>
+     function scroll_iframe_by_name()
+     {
+     frames['calendar_frame'].document.getElementById("content").scrollTop = 315;
+     }
+
+
     function switch_to_date() {
     document.getElementById("calendar_div").style.height = 42;
     document.getElementById("calendar_div").scrollTop = 0;
@@ -15,15 +21,9 @@
   </script>
 </head>
 
-<div id="calendar_div_menu">
-  <form>
-    <input type="button" onclick="switch_to_date()" value="Change Date" />
-    <input type="button" onclick="switch_to_calendar()" value="Show Calendar" />
-  </form>
-</div>
-<div id="calendar_div" style="height: 470px; overflow:hidden">
-<iframe name="calendar_frame" src="https://www.google.com/calendar/embed?title=DZJ%20Calendar&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;hl=pl&amp;bgcolor=%23ffffff&amp;src=dzj.calendar%40gmail.com&amp;color=%23182C57&amp;ctz=Europe%2FWarsaw" style=" border:solid 1px #777 " width="800" height="1150" frameborder="0" scrolling="no"></iframe>
-</div>
+<body onload="scroll_iframe_by_name()">
+
+<iframe name="calendar_frame" src="calendar_frame" style=" border:solid 1px #777 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
 {% if users_list %}
     <ul>
@@ -35,3 +35,5 @@
 {% else %}
     <p>No users in system.</p>
 {% endif %}
+
+</body>
