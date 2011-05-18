@@ -10,6 +10,8 @@ urlpatterns = patterns('',
      (r'^dzjcalendar/$', 'dzjcalendar.views.index'),
      (r'^cal$', 'dzjcalendar.views.calendar'),
      (r'^$', 'dzjcalendar.views.index'),
+     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
+      {'document_root': '/home/rudy/dzjsite/site_media'}),
     # Uncomment the admin/doc line below to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
