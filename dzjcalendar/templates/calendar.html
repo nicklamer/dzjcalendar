@@ -15,6 +15,7 @@
   </script>
 </head>
 
+<body onload="switch_to_calendar()">
 <div id="calendar_div_menu">
   <form>
     <input type="button" onclick="switch_to_date()" value="Change Date" />
@@ -35,3 +36,4 @@
 {% else %}
     <p>No users in system.</p>
 {% endif %}
+</body>
